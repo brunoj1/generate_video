@@ -37,18 +37,18 @@
     },
     "class_type": "VAELoader",
     "_meta": {
-      "title": "VAE 로드"
+      "title": "VAE Load"
     }
   },
   "228": {
     "inputs": {
-      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "clip_name": "umt5-xxl-enc-bf16.safetensors.safetensors",
       "type": "wan",
       "device": "default"
     },
     "class_type": "CLIPLoader",
     "_meta": {
-      "title": "CLIP 로드"
+      "title": "CLIP Load"
     }
   },
   "230": {
@@ -58,7 +58,7 @@
     },
     "class_type": "UNETLoader",
     "_meta": {
-      "title": "확산 모델 로드"
+      "title": "Diffusion Model Load"
     }
   },
   "235": {
@@ -68,7 +68,7 @@
     },
     "class_type": "UNETLoader",
     "_meta": {
-      "title": "확산 모델 로드"
+      "title": "Diffusion Model Load"
     }
   },
   "246": {
@@ -82,7 +82,7 @@
   },
   "247": {
     "inputs": {
-      "value": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走,"
+      "value": "Avoid unrealistic lighting, distorted proportions, or cluttered overlays. Do not include unrelated furniture styles, outdoor scenes, or abstract visual effects. Exclude jump cuts, shaky camera movements, or narrow angles that obscure parts of the room. Do not alter the original design aesthetic or introduce elements not present in the attached image."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -95,7 +95,16 @@
     },
     "class_type": "LoadImage",
     "_meta": {
-      "title": "이미지 로드"
+      "title": "Image Load"
+    }
+  },
+   "261": {
+    "inputs": {
+      "image": "ComfyUI_34777_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Image Load"
     }
   },
   "277": {
@@ -120,20 +129,6 @@
       "title": "Video Combine 🎥🅥🅗🅢"
     }
   },
-  "282": {
-    "inputs": {
-      "lora_name": "lora1_high.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "283",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA 로드 (모델 전용)"
-    }
-  },
   "283": {
     "inputs": {
       "lora_name": "Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors",
@@ -145,7 +140,7 @@
     },
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "LoRA 로드 (모델 전용)"
+      "title": "LoRA Load (Model Only)"
     }
   },
   "284": {
@@ -159,7 +154,7 @@
     },
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "LoRA 로드 (모델 전용)"
+      "title": "LoRA Load (Model Only)"
     }
   },
   "285": {
@@ -173,21 +168,7 @@
     },
     "class_type": "LoraLoaderModelOnly",
     "_meta": {
-      "title": "LoRA 로드 (모델 전용)"
-    }
-  },
-  "286": {
-    "inputs": {
-      "lora_name": "lora1_low.safetensors",
-      "strength_model": 1.0,
-      "model": [
-        "285",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoRA 로드 (모델 전용)"
+      "title": "LoRA Load (Model Only)"
     }
   },
   "288": {
@@ -227,7 +208,7 @@
     },
     "class_type": "VAEDecode",
     "_meta": {
-      "title": "VAE 디코드"
+      "title": "VAE Decode"
     }
   },
   "362": {
@@ -240,7 +221,7 @@
     },
     "class_type": "ModelSamplingSD3",
     "_meta": {
-      "title": "모델 샘플링 (SD3)"
+      "title": "Model Sampling (SD3)"
     }
   },
   "363": {
@@ -253,7 +234,7 @@
     },
     "class_type": "ModelSamplingSD3",
     "_meta": {
-      "title": "모델 샘플링 (SD3)"
+      "title": "Model Sampling (SD3)"
     }
   },
   "377": {
@@ -292,7 +273,7 @@
       "compile_transformer_blocks_only": true,
       "dynamo_cache_size_limit": 64,
       "model": [
-        "286",
+        "285",
         0
       ]
     },
@@ -310,7 +291,7 @@
       "compile_transformer_blocks_only": true,
       "dynamo_cache_size_limit": 64,
       "model": [
-        "282",
+        "283",
         0
       ]
     },
@@ -375,11 +356,15 @@
       "start_image": [
         "847",
         0
+      ],
+      "end_image": [
+        "860",
+        0
       ]
     },
     "class_type": "WanFirstLastFrameToVideo",
     "_meta": {
-      "title": "WAN 비디오 생성 (시작-끝 프레임)"
+      "title": "WAN Video Generation (Start-End Frame)"
     }
   },
   "593": {
@@ -418,7 +403,7 @@
     "inputs": {},
     "class_type": "DisableNoise",
     "_meta": {
-      "title": "노이즈 비활성화"
+      "title": "Disable Noise"
     }
   },
   "829": {
@@ -431,7 +416,7 @@
     },
     "class_type": "SplitSigmas",
     "_meta": {
-      "title": "시그마 배열 분할 (스텝)"
+      "title": "Split Sigmas Array (Step)"
     }
   },
   "830": {
@@ -463,7 +448,7 @@
     },
     "class_type": "KSamplerSelect",
     "_meta": {
-      "title": "KSampler (선택)"
+      "title": "KSampler (Select)"
     }
   },
   "832": {
@@ -507,7 +492,7 @@
     },
     "class_type": "BasicGuider",
     "_meta": {
-      "title": "기본 가이드"
+      "title": "Basic Guider"
     }
   },
   "834": {
@@ -522,7 +507,7 @@
     },
     "class_type": "BetaSamplingScheduler",
     "_meta": {
-      "title": "베타 샘플링 스케줄러"
+      "title": "Beta Sampling Scheduler"
     }
   },
   "835": {
@@ -531,7 +516,7 @@
     },
     "class_type": "RandomNoise",
     "_meta": {
-      "title": "무작위 노이즈"
+      "title": "Random Noise"
     }
   },
   "836": {
@@ -576,7 +561,7 @@
     },
     "class_type": "ImageScaleBy",
     "_meta": {
-      "title": "이미지 확대 비율"
+      "title": "Image Scale By"
     }
   },
   "838": {
@@ -602,7 +587,7 @@
     },
     "class_type": "ImageScaleBy",
     "_meta": {
-      "title": "이미지 확대 비율"
+      "title": "Image Scale By"
     }
   },
   "840": {
@@ -629,7 +614,7 @@
     },
     "class_type": "EmptyImage",
     "_meta": {
-      "title": "빈 이미지"
+      "title": "Empty Image"
     }
   },
   "842": {
@@ -646,7 +631,7 @@
     },
     "class_type": "ImageScaleBy",
     "_meta": {
-      "title": "이미지 확대 비율"
+      "title": "Image Scale By"
     }
   },
   "843": {
@@ -696,6 +681,28 @@
       "crop": "center",
       "image": [
         "260",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image - F"
+    }
+  },
+   "860": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": [
+        "843",
+        0
+      ],
+      "height": [
+        "843",
+        1
+      ],
+      "crop": "center",
+      "image": [
+        "261",
         0
       ]
     },

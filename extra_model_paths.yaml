@@ -1,5 +1,4 @@
 #config for comfyui
-#your base path should be either an existing comfy install or a central folder where you store all of your models, loras, etc.
 
 comfyui:
     base_path: /ComfyUI/

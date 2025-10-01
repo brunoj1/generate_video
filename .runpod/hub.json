@@ -1,16 +1,16 @@
 {
-    "title": "Wan2.2 with LoRA",
-    "description": "Advanced AI model for generating high-quality videos from images with natural motion and realistic animations. you can use at most 3 LoRA pairs",
+    "title": "Wan2.2 - First to Last Frame",
+    "description": "Advanced AI model for generating high-quality videos from images",
     "type": "serverless",
     "category": "video",
-    "iconUrl": "https://github.com/wlsdml1114/Engui_Studio/blob/main/assets/logo.png?raw=true",
+    "iconUrl": "https://github.com/brunoj1/generate_video/blob/main/assets/comfyui.png?raw=true",
   
     "config": {
       "runsOn": "GPU",
       "containerDiskInGb": 180,
   
       "gpuCount": 1,
-      "gpuIds": "ADA_24,ADA_32_PRO",
+      "gpuIds": "ADA_32_PRO",
       "allowedCudaVersions": [
         "12.9", "12.8"
       ]
