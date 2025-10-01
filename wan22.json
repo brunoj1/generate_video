@@ -33,7 +33,7 @@
   },
   "226": {
     "inputs": {
-      "vae_name": "wan_2.1_vae.safetensors"
+      "vae_name": "wan2.2_vae.safetensors"
     },
     "class_type": "VAELoader",
     "_meta": {
@@ -42,7 +42,7 @@
   },
   "228": {
     "inputs": {
-      "clip_name": "umt5-xxl-enc-bf16.safetensors.safetensors",
+      "clip_name": "umt5_xxl_fp16.safetensors",
       "type": "wan",
       "device": "default"
     },
