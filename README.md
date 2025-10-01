@@ -1,6 +1,6 @@
 # Wan22 for RunPod Serverless
 
-** THIS IS A FORK of [![Runpod](https://api.runpod.io/badge/wlsdml1114/generate_video)](https://console.runpod.io/hub/wlsdml1114/generate_video)
+## THIS IS A FORK of [https://github.com/wlsdml1114/generate_video](https://github.com/wlsdml1114/generate_video)
 
 This project is a template designed to easily deploy and use [Wan22](https://github.com/Comfy-Org/Wan_2.2_ComfyUI_Repackaged) in the RunPod .Serverless environment.
 
@@ -112,8 +112,6 @@ Instead of directly transmitting Base64 encoded files, you can use RunPod's Netw
 2.  **Upload Files**: Upload the image files and LoRA models you want to use to the created Network Volume.
 3.  **File Organization**: 
     - Place your input images anywhere in the Network Volume
-4.  **Specify Paths**: When making an API request, specify the file paths within the Network Volume:
-    - For `image_path`: Use the full path to your image file (e.g., `"/my_volume/images/portrait.jpg"`)
 
 ## 🔧 Workflow Configuration
 
