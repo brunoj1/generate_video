@@ -9,7 +9,7 @@
       "runsOn": "GPU",
       "containerDiskInGb": 500,
       "gpuCount": 1,
-      "gpuIds": "ADA_32_PRO",
+      "gpuIds": "ADA_48_PRO",
       "allowedCudaVersions": [
         "12.9", "12.8"
       ]

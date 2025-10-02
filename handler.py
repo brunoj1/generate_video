@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 server_address = os.getenv('SERVER_ADDRESS', '127.0.0.1')
 client_id = str(uuid.uuid4())
 
-def save_data_if_base64(data_input, temp_dir, output_filename):
+def save_data_if_base64(data_input, task, output_filename):
     """
     Checks if the input data is a Base64 string. If so, saves it as a file and returns the path.
     If it's a regular path string, returns it as is.
@@ -29,17 +29,15 @@ def save_data_if_base64(data_input, temp_dir, output_filename):
         # Base64 strings will decode successfully
         decoded_data = base64.b64decode(data_input)
         
-        # Create the directory if it doesn't exist
-        os.makedirs(temp_dir, exist_ok=True)
-        
         # If decoding succeeds, save it as a temporary file
-        file_path = os.path.abspath(os.path.join(temp_dir, output_filename))
+        file_path = f"{task}_{output_filename}"
+
         with open(file_path, 'wb') as f:  # Save in binary write mode ('wb')
             f.write(decoded_data)
         
         # Return the path of the saved file
         print(f"✅ Saved Base64 input as file '{file_path}'.")
-        return file_path
+        return f"/{file_path}"
 
     except (binascii.Error, ValueError):
         # If decoding fails, treat it as a regular path and return the original value
@@ -105,7 +103,6 @@ def handler(job):
 
     logger.info(f"Received job input: {job_input}")
     task_id = f"task_{uuid.uuid4()}"
-    last_task_id = f"task_{uuid.uuid4()}"
 
     first_image_base64_input = job_input.get("first_image_base64")
     last_image_base64_input = job_input.get("last_image_base64")
@@ -113,7 +110,7 @@ def handler(job):
     # Use helper function to determine image file path (Base64 or Path)
     # Since the image extension is unknown, assume .jpg or get it from input  
     first_image_path = save_data_if_base64(first_image_base64_input, task_id, "first_input_image.jpg")
-    last_image_path = save_data_if_base64(last_image_base64_input, last_task_id, "last_input_image.jpg")
+    last_image_path = save_data_if_base64(last_image_base64_input, task_id, "last_input_image.jpg")
 
     # Choose appropriate workflow file
     workflow_file = "/wan22.json"
