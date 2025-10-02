@@ -10,7 +10,7 @@
         "cfg": 7.5,
         "width": 512,
         "height": 512,
-        "length": 81,
+        "length": 1,
         "steps": 6
       },
       "timeout": 10000

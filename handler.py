@@ -105,6 +105,7 @@ def handler(job):
 
     logger.info(f"Received job input: {job_input}")
     task_id = f"task_{uuid.uuid4()}"
+    last_task_id = f"task_{uuid.uuid4()}"
 
     first_image_base64_input = job_input.get("first_image_base64")
     last_image_base64_input = job_input.get("last_image_base64")
@@ -112,7 +113,7 @@ def handler(job):
     # Use helper function to determine image file path (Base64 or Path)
     # Since the image extension is unknown, assume .jpg or get it from input  
     first_image_path = save_data_if_base64(first_image_base64_input, task_id, "first_input_image.jpg")
-    last_image_path = save_data_if_base64(last_image_base64_input, task_id, "lastinput_image.jpg")
+    last_image_path = save_data_if_base64(last_image_base64_input, last_task_id, "last_input_image.jpg")
 
     # Choose appropriate workflow file
     workflow_file = "/wan22.json"
