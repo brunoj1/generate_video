@@ -162,8 +162,8 @@ def handler(job):
             time.sleep(1)
     
     ws = websocket.WebSocket()
-    # Attempt WebSocket connection (up to 6 minutes)
-    max_attempts = int(350 / 5)  # 6 minutes (try every 5 seconds)
+    # Attempt WebSocket connection (up to 3 minutes)
+    max_attempts = int(180 / 5)  # 3 minutes (try every 5 seconds)
     for attempt in range(max_attempts):
         import time
         try:
