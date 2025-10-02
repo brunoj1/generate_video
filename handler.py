@@ -111,21 +111,9 @@ def handler(job):
 
     # Use helper function to determine image file path (Base64 or Path)
     # Since the image extension is unknown, assume .jpg or get it from input  
-    try:
-        os.makedirs(task_id, exist_ok=True)
-        first_image_path = os.path.join(task_id, "first_input_image.jpg")
-        decoded_data = base64.b64decode(first_image_base64_input)
-        with open(first_image_path, 'wb') as f:
-            f.write(decoded_data)
-        logger.info(f"Saved Base64 image to file '{first_image_path}'")
-        last_image_path = os.path.join(task_id, "last_input_image.jpg")
-        decoded_data = base64.b64decode(last_image_base64_input)
-        with open(last_image_path, 'wb') as f:
-            f.write(decoded_data)
-        logger.info(f"Saved Base64 image to file '{last_image_path}'")
-    except Exception as e:
-        return {"error": f"Failed to decode Base64 image: {e}"}
-    
+    first_image_path = save_data_if_base64(first_image_base64_input, task_id, "first_input_image.jpg")
+    last_image_path = save_data_if_base64(last_image_base64_input, task_id, "lastinput_image.jpg")
+
     # Choose appropriate workflow file
     workflow_file = "/wan22.json"
 
