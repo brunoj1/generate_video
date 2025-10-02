@@ -117,12 +117,12 @@ def handler(job):
         decoded_data = base64.b64decode(first_image_base64_input)
         with open(first_image_path, 'wb') as f:
             f.write(decoded_data)
-        logger.info(f"Saved Base64 video to file '{first_image_path}'")
+        logger.info(f"Saved Base64 image to file '{first_image_path}'")
         last_image_path = os.path.join(task_id, "last_input_image.jpg")
         decoded_data = base64.b64decode(last_image_base64_input)
         with open(last_image_path, 'wb') as f:
             f.write(decoded_data)
-        logger.info(f"Saved Base64 video to file '{last_image_path}'")
+        logger.info(f"Saved Base64 image to file '{last_image_path}'")
     except Exception as e:
         return {"error": f"Failed to decode Base64 image: {e}"}
     
