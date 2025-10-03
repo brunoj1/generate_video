@@ -37,7 +37,7 @@ def save_data_if_base64(data_input, task, output_filename):
         
         # Return the path of the saved file
         print(f"✅ Saved Base64 input as file '{file_path}'.")
-        return f"/{file_path}"
+        return file_path
 
     except (binascii.Error, ValueError):
         # If decoding fails, treat it as a regular path and return the original value
