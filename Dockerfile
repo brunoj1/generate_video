@@ -48,6 +48,7 @@ RUN cd /ComfyUI/custom_nodes && \
 
 RUN pip install onnx
 RUN pip install onnxruntime-gpu
+RUN pip install --upgrade torch torchvision torchaudio
 
 COPY . .
 COPY extra_model_paths.yaml /ComfyUI/extra_model_paths.yaml
