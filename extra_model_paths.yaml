@@ -9,13 +9,16 @@ comfyui:
     clip_vision: models/clip_vision/
     configs: models/configs/
     controlnet: models/controlnet/
+    text-encoders: /runpod-volume/text_encoders/
     diffusion_models: |
         models/diffusion_models
         models/unet
-        /runpod-volume/models/
+        /runpod-volume/diffusion_models/
     embeddings: models/embeddings/
     loras: |
         models/loras/
         /runpod-volume/loras/
     upscale_models: models/upscale_models/
-    vae: models/vae/
+    vae: |
+        models/loras/
+        /runpod-volume/vae/
