@@ -109,8 +109,8 @@ def handler(job):
 
     # Use helper function to determine image file path (Base64 or Path)
     # Since the image extension is unknown, assume .jpg or get it from input  
-    first_image_path = save_data_if_base64(first_image_base64_input, task_id, "first_input_image.jpg")
-    last_image_path = save_data_if_base64(last_image_base64_input, task_id, "last_input_image.jpg")
+    # first_image_path = save_data_if_base64(first_image_base64_input, task_id, "first_input_image.jpg")
+    # last_image_path = save_data_if_base64(last_image_base64_input, task_id, "last_input_image.jpg")
 
     # Choose appropriate workflow file
     workflow_file = "/wan22.json"
@@ -120,8 +120,8 @@ def handler(job):
     length = job_input.get("length", 81)
     steps = job_input.get("steps", 10)
 
-    prompt["260"]["inputs"]["image"] = first_image_path
-    prompt["261"]["inputs"]["image"] = last_image_path
+    prompt["260"]["inputs"]["image"] = first_image_base64_input
+    prompt["261"]["inputs"]["image"] = last_image_base64_input
     prompt["846"]["inputs"]["value"] = length
     prompt["246"]["inputs"]["value"] = job_input["prompt"]
     prompt["835"]["inputs"]["noise_seed"] = job_input["seed"]
