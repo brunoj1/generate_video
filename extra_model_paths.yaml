@@ -9,7 +9,7 @@ comfyui:
     clip_vision: models/clip_vision/
     configs: models/configs/
     controlnet: models/controlnet/
-    text-encoders: /runpod-volume/text_encoders/
+    text_encoders: /runpod-volume/text_encoders/
     diffusion_models: |
         models/diffusion_models
         models/unet
