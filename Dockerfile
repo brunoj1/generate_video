@@ -45,11 +45,11 @@ RUN cd /ComfyUI/custom_nodes && \
 
 COPY /workspace/wan2.2_vae.safetensors /ComfyUI/models/vae
 COPY /workspace/mt5_xxl_fp16.safetensors /ComfyUI/models/text_encoders
-COPY /workspace/wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors /ComfyUI/models/diffusion_models/wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
-COPY /workspace/wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors /ComfyUI/models/diffusion_models/wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
-COPY /workspace/Wan21_CausVid_14B_T2V_lora_rank32.safetensors /ComfyUI/models/loras/Wan21_CausVid_14B_T2V_lora_rank32.safetensors
-COPY /workspace/Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors /ComfyUI/models/loras/Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors
-COPY /workspace/Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors /ComfyUI/models/loras/Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
+COPY /workspace/wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors /ComfyUI/models/diffusion_models
+COPY /workspace/wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors /ComfyUI/models/diffusion_models
+COPY /workspace/Wan21_CausVid_14B_T2V_lora_rank32.safetensors /ComfyUI/models/loras
+COPY /workspace/Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors /ComfyUI/models/loras
+COPY /workspace/Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors /ComfyUI/models/loras
 
 RUN pip install onnx
 RUN pip install onnxruntime-gpu
