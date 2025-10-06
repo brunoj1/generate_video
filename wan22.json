@@ -93,7 +93,7 @@
     "inputs": {
       "image": "ComfyUI_34777_.png"
     },
-    "class_type": "LoadImage",
+    "class_type": "ETN_LoadImageBase64",
     "_meta": {
       "title": "Image Load"
     }
@@ -102,7 +102,7 @@
     "inputs": {
       "image": "ComfyUI_34777_.png"
     },
-    "class_type": "LoadImage",
+    "class_type": "ETN_LoadImageBase64",
     "_meta": {
       "title": "Image Load"
     }

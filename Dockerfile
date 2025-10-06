@@ -43,6 +43,8 @@ RUN cd /ComfyUI/custom_nodes && \
     cd ComfyUI-WanVideoWrapper && \
     pip install -r requirements.txt
 
+RUN cd /ComfyUI/custom_nodes && \
+    git clone https://github.com/Acly/comfyui-tooling-nodes.git
 
 RUN pip install onnx
 RUN pip install onnxruntime-gpu
