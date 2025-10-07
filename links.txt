@@ -2,6 +2,6 @@ wget -q https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main
 wget -q https://huggingface.co/chatpig/encoder/resolve/main/umt5_xxl_fp8_e4m3fn_scaled.safetensors -O text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors
 wget -q https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors -O diffusion_models/wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
 wget -q https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors -O diffusion_models/wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
-wget -q https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan21_CausVid_14B_T2V_lora_rank32.safetensors -O loras/Wan21_CausVid_14B_T2V_lora_rank32.safetensors
-wget -q https://huggingface.co/Aitrepreneur/FLX/resolve/main/Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors -O loras/Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors
-wget -q https://huggingface.co/Aitrepreneur/FLX/resolve/main/Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors -O loras/Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
+wget -q https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan21_CausVid_14B_T2V_lora_rank32.safetensors -O Wan21_CausVid_14B_T2V_lora_rank32.safetensors
+wget -q https://huggingface.co/Aitrepreneur/FLX/resolve/main/Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors -O Wan2.2-Lightning_I2V-A14B-4steps-lora_HIGH_fp16.safetensors
+wget -q https://huggingface.co/Aitrepreneur/FLX/resolve/main/Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors -O Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors
