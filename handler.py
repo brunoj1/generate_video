@@ -121,16 +121,16 @@ def handler(job):
     prompt["246"]["inputs"]["value"] = job_input["prompt"]
     # prompt["835"]["inputs"]["noise_seed"] = job_input["seed"]
     # prompt["830"]["inputs"]["cfg"] = job_input["cfg"]
-    prompt["849"]["inputs"]["value"] = job_input["width"]
-    prompt["848"]["inputs"]["value"] = job_input["height"]
+    prompt["841"]["inputs"]["width"] = job_input["width"]
+    prompt["841"]["inputs"]["height"] = job_input["height"]
     
     # Apply step configuration
-    if "834" in prompt:
-        prompt["834"]["inputs"]["steps"] = steps
-        logger.info(f"Steps set to: {steps}")
-        lowsteps = int(steps * 0.6)
-        prompt["829"]["inputs"]["step"] = lowsteps
-        logger.info(f"LowSteps set to: {lowsteps}")      
+    # if "834" in prompt:
+    #     prompt["834"]["inputs"]["steps"] = steps
+    #     logger.info(f"Steps set to: {steps}")
+    #     lowsteps = int(steps * 0.6)
+    #     prompt["829"]["inputs"]["step"] = lowsteps
+    #     logger.info(f"LowSteps set to: {lowsteps}")      
                         
     ws_url = f"ws://{server_address}:8188/ws?clientId={client_id}"
     logger.info(f"Connecting to WebSocket: {ws_url}")
