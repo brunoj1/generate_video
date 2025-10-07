@@ -108,29 +108,29 @@ def handler(job):
     last_image_base64_input = job_input.get("last_image_base64")
 
     # Choose appropriate workflow file
-    workflow_file = "/wan22fl.json"
+    workflow_file = "/wan22_new.json"
 
     prompt = load_workflow(workflow_file)
     
     length = job_input.get("length", 81)
     steps = job_input.get("steps", 10)
 
-    prompt["98"]["inputs"]["image"] = first_image_base64_input
-    prompt["99"]["inputs"]["image"] = last_image_base64_input
-    prompt["67"]["inputs"]["length"] = length
-    prompt["6"]["inputs"]["text"] = job_input["prompt"]
+    prompt["260"]["inputs"]["image"] = first_image_base64_input
+    prompt["261"]["inputs"]["image"] = last_image_base64_input
+    prompt["846"]["inputs"]["value"] = length
+    prompt["246"]["inputs"]["value"] = job_input["prompt"]
     # prompt["835"]["inputs"]["noise_seed"] = job_input["seed"]
     # prompt["830"]["inputs"]["cfg"] = job_input["cfg"]
-    prompt["6"]["inputs"]["width"] = job_input["width"]
-    prompt["6"]["inputs"]["height"] = job_input["height"]
+    prompt["849"]["inputs"]["value"] = job_input["width"]
+    prompt["848"]["inputs"]["value"] = job_input["height"]
     
-    # # Apply step configuration
-    # if "834" in prompt:
-    #     prompt["834"]["inputs"]["steps"] = steps
-    #     logger.info(f"Steps set to: {steps}")
-    #     lowsteps = int(steps * 0.6)
-    #     prompt["829"]["inputs"]["step"] = lowsteps
-    #     logger.info(f"LowSteps set to: {lowsteps}")      
+    # Apply step configuration
+    if "834" in prompt:
+        prompt["834"]["inputs"]["steps"] = steps
+        logger.info(f"Steps set to: {steps}")
+        lowsteps = int(steps * 0.6)
+        prompt["829"]["inputs"]["step"] = lowsteps
+        logger.info(f"LowSteps set to: {lowsteps}")      
                         
     ws_url = f"ws://{server_address}:8188/ws?clientId={client_id}"
     logger.info(f"Connecting to WebSocket: {ws_url}")
