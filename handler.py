@@ -159,8 +159,8 @@ def handler(job):
             time.sleep(1)
     
     ws = websocket.WebSocket()
-    # Attempt WebSocket connection (up to 3 minutes)
-    max_attempts = int(180 / 5)  # 3 minutes (try every 5 seconds)
+    # Attempt WebSocket connection (up to 6 minutes)
+    max_attempts = int(360 / 5)  # 6 minutes (try every 6 seconds)
     for attempt in range(max_attempts):
         import time
         try:
@@ -170,7 +170,7 @@ def handler(job):
         except Exception as e:
             logger.warning(f"WebSocket connection failed (attempt {attempt+1}/{max_attempts}): {e}")
             if attempt == max_attempts - 1:
-                raise Exception("WebSocket connection timed out (3 minutes)")
+                raise Exception("WebSocket connection timed out (6 minutes)")
             time.sleep(5)
 
     videos = get_videos(ws, prompt)
