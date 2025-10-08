@@ -142,6 +142,7 @@ def handler(job):
     # Check HTTP connection (up to 1 minute)
     max_http_attempts = 180
     for http_attempt in range(max_http_attempts):
+        import time
         try:
             import urllib.request
             response = urllib.request.urlopen(http_url, timeout=5)
