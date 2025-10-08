@@ -212,34 +212,7 @@
     "_meta": {
       "title": "Model Sampling (SD3)"
     }
-  },
-  "377": {
-    "inputs": {
-      "empty_cache": true,
-      "gc_collect": true,
-      "unload_all_models": true,
-      "any_input": [
-        "277",
-        0
-      ]
-    },
-    "class_type": "VRAM_Debug",
-    "_meta": {
-      "title": "VRAM Debug"
-    }
-  },
-  "378": {
-    "inputs": {
-      "any_input": [
-        "377",
-        0
-      ]
-    },
-    "class_type": "DummyOut",
-    "_meta": {
-      "title": "Dummy Out"
-    }
-  },
+  },   
   "481": {
     "inputs": {
       "width": [
