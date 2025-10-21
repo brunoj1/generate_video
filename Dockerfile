@@ -1,5 +1,5 @@
 # Use specific version of nvidia cuda image
-FROM wlsdml1114/multitalk-base:1.4 as runtime
+FROM wlsdml1114/multitalk-base:1.7 as runtime
 
 RUN pip install -U "huggingface_hub[hf_transfer]"
 RUN pip install runpod websocket-client
@@ -30,11 +30,6 @@ RUN cd /ComfyUI/custom_nodes && \
 
 RUN cd /ComfyUI/custom_nodes && \
     git clone https://github.com/Acly/comfyui-tooling-nodes.git
-
-RUN pip install onnx
-RUN pip install onnxruntime-gpu
-RUN pip install --force --upgrade torch torchvision --index-url https://download.pytorch.org/whl/cu128
-RUN pip install flash_attn -U --force-reinstall
 
 COPY . .
 COPY extra_model_paths.yaml /ComfyUI/extra_model_paths.yaml
