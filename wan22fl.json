@@ -266,6 +266,10 @@
       "images": [
         "8",
         0
+      ],
+      "vae": [
+        "39",
+        0
       ]
     },
     "class_type": "VHS_VideoCombine",
