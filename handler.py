@@ -8,8 +8,8 @@ import uuid
 import logging
 import urllib.request
 import urllib.parse
-import binascii  # Import for handling Base64 errors
-# Logging configuration
+import binascii  
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
