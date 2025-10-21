@@ -46,6 +46,9 @@ def get_videos(ws, prompt):
             continue
 
     history = get_history(prompt_id)[prompt_id]
+    
+    logger.info(f"History from: {history}")
+
     for node_id in history['outputs']:
         node_output = history['outputs'][node_id]
         videos_output = []
