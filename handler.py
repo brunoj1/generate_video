@@ -73,7 +73,7 @@ def handler(job):
     last_image_base64_input = job_input.get("last_image_base64")
 
     # Choose appropriate workflow file
-    workflow_file = "/wan22_fl.json"
+    workflow_file = "/wan22fl.json"
 
     prompt = load_workflow(workflow_file)    
 
