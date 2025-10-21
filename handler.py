@@ -73,19 +73,13 @@ def handler(job):
     last_image_base64_input = job_input.get("last_image_base64")
 
     # Choose appropriate workflow file
-    workflow_file = "/wan22.json"
+    workflow_file = "/wan22_fl.json"
 
-    prompt = load_workflow(workflow_file)
-    
-    length = job_input.get("length", 81)
-    steps = job_input.get("steps", 10)
+    prompt = load_workflow(workflow_file)    
 
-    prompt["260"]["inputs"]["image"] = first_image_base64_input
-    prompt["261"]["inputs"]["image"] = last_image_base64_input
-    prompt["846"]["inputs"]["value"] = length
-    prompt["246"]["inputs"]["value"] = job_input["prompt"]
-    prompt["841"]["inputs"]["width"] = job_input["width"]
-    prompt["841"]["inputs"]["height"] = job_input["height"]
+    prompt["98"]["inputs"]["image"] = first_image_base64_input
+    prompt["99"]["inputs"]["image"] = last_image_base64_input
+    prompt["6"]["inputs"]["text"] = job_input["prompt"]
                         
     ws_url = f"ws://{server_address}:8188/ws?clientId={client_id}"
     logger.info(f"Connecting to WebSocket: {ws_url}")

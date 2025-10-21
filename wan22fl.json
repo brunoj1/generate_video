@@ -261,15 +261,6 @@
       "title": "LoraLoaderModelOnly"
     }
   },
-  "97": {
-    "inputs": {
-      "image": ""
-    },
-    "class_type": "ETN_LoadImageBase64",
-    "_meta": {
-      "title": "Load Image (Base64)"
-    }
-  },
   "98": {
     "inputs": {
       "image": "start"
