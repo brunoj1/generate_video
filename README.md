@@ -29,8 +29,8 @@ The `input` object must contain the following fields. Images can be input using 
 #### Image Input
 | Parameter | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| `first_image_base64` | `string` | No | `/example_image.png` | Base64 encoded string of the input image |
-| `first_image_base64` | `string` | No | `/example_image.png` | Base64 encoded string of the input image |
+| `first_image_base64` | `string` | No | `xxxx` | Base64 encoded string of the input image |
+| `first_image_base64` | `string` | No | `xxxx` | Base64 encoded string of the input image |
 
 
 **Important**: To use LoRA models, you must upload the LoRA files to the `/loras/` folder in your RunPod Network Volume. The LoRA model names in `lora_pairs` should match the filenames in the `/loras/` folder.
