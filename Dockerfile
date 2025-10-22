@@ -14,6 +14,11 @@ RUN cd /ComfyUI/custom_nodes && \
     git clone https://github.com/Comfy-Org/ComfyUI-Manager.git && \
     cd ComfyUI-Manager && \
     pip install -r requirements.txt
+
+RUN cd /ComfyUI/custom_nodes && \
+    git clone https://github.com/kijai/ComfyUI-KJNodes && \
+    cd ComfyUI-KJNodes && \
+    pip install -r requirements.txt
     
 RUN cd /ComfyUI/custom_nodes && \
     git clone https://github.com/city96/ComfyUI-GGUF && \
